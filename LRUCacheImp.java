@@ -15,6 +15,8 @@ class LRUCacheImp {
     {
         if (!cache.contains(key))
             return false;
+        cache.remove(key);
+        cache.add(key);
         return true;
     }
  
@@ -49,7 +51,8 @@ class LRUCacheImp {
         ca.addToCache(6);
         ca.addToCache(4);
         ca.addToCache(3);
-        ca.addToCache(6);
+        ca.get(6)
+        ca.addToCache(7);
         ca.addToCache(2);
         ca.addToCache(5);
         ca.display();
